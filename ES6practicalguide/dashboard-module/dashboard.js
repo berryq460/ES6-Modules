@@ -1,25 +1,30 @@
-// FILE: dashboard.js
-
 // From component folder
-import { users, issues } from '../components';
+import { Users } from '../components/users.js';
+import { Issues } from '../components/issues.js';
 
 // From layout folder
-import { header, sidebar } from '../layouts'; 
+import { Header } from '../layouts/header.js';
+import { Sidebar } from '../layouts/sidebar.js';
 
 
 class Dashboard {
 
-  loadDashboard(){
+    loadDashboard() {
 
-    // Invoke methods
-    users.loadUsers();
-    issues.loadIssues();
-    header.loadHeader();
-    sidebar.loadSidebar();
+        // Create new instances
+        const users = new Users();
+        users.loadUsers();
+        const issues = new Issues();
+        issues.loadIssues();
+        const header = new Header();
+        header.loadHeader();
+        const sidebar = new Sidebar();
+        sidebar.loadSidebar();
 
-    console.log('Dashboard component is loaded');
-  }
+
+        console.log('Dashboard component is loaded');
+    }
 
 }
 
-export let dashboard = new Dashboard(); 
+export { Dashboard }; 
