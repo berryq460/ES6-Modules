@@ -1,6 +1,9 @@
-// FILE: components/index.js
+class Issues {
 
-// Dynamic interface
-export { users } from './users';
-export { issues } from './issues';
-export { userProfile } from './user-profile.js';
+    loadIssues() {
+        console.log('Issues is loaded...');
+    }
+
+}
+
+export { Issues }; 
