@@ -1,18 +1,18 @@
-// FILE: header.js
-import { userProfile } from '../components/user-profile';
+import { UserProfile } from '../components/users-profile.js';
 
 class Header {
 
+    loadHeader() {
+        // Create a new instance
+        const userProfile = new UserProfile();
 
-  loadHeader() {
+        // Invoke the method (component)
+        userProfile.loadUserProfile();
 
-    // Invoke the method
-    userProfile.loadUserProfile();
-
-    console.log('Header component is loaded...')
-
-  }
+        // Output loading status
+        console.log('Header component is loaded...');
+    }
 
 }
 
-export let header = new Header(); 
+export { Header };
